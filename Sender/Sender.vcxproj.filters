@@ -21,8 +21,16 @@
     <ClInclude Include="Visual Micro\.Sender.vsarduino.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="NexaSender.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Text Include="keywords.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="NexaSender.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
