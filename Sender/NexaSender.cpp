@@ -1,5 +1,7 @@
 #include "NexaSender.h"
 
+bool _binarySignalData[35];
+
 NexaSender::NexaSender(int pinId, unsigned long deviceId)
 {
 	_pinId = pinId;
@@ -8,7 +10,7 @@ NexaSender::NexaSender(int pinId, unsigned long deviceId)
 	longLowRatio = 5;
 	introLowRatio = 10;
 	endPauseRatio = 40;
-	_binarySignalData[33];
+	_binarySignalData[35];
 }
 
 
@@ -34,7 +36,7 @@ void NexaSender::SendDeviceOnSignal(byte groupId, byte buttonId)
 
 void NexaSender::SendSignal(bool turnAllOff, bool turnOn, byte groupId, byte buttonId)
 {
-	Serial.print("#:" + String(_deviceId));
+	Serial.print("#2:" + String(_deviceId));
 
 	AssignDeviceIdToSignalData();
 	AssignTurnAllOffToSignalData(turnAllOff);

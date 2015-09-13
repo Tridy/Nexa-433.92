@@ -1,18 +1,22 @@
 #include "NexaSender.h"
 
-NexaSender* _sender;
+unsigned long _deviceId = 55799201;
+const byte _pinId = 11;
+const byte _groupId = 11;
+const byte _buttonId = 11;
+
+NexaSender _sender(_pinId, _deviceId);
 
 
 void setup()
 {
-	unsigned long deviceId = 55799201;
-	NexaSender _sender(11, deviceId);
+
 }
 
 void loop()
 {
-	_sender->SendDeviceOnSignal(3, 3);
+	_sender.SendDeviceOnSignal(_groupId, _buttonId);
 	delay(500);
-	_sender->SendDeviceOffSignal(3, 3);
+	_sender.SendDeviceOffSignal(_groupId, _buttonId);
 	delay(2000);
 }

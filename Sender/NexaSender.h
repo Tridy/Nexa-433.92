@@ -27,7 +27,7 @@ private:
 	int longLowRatio;
 	int introLowRatio ;
 	int endPauseRatio;
-	bool _binarySignalData[];
+	// bool *_binarySignalData;
 
 	void SendSignal(bool turnAllOff, bool turnOn, byte groupId, byte buttonId);
 	void AssignDeviceIdToSignalData();
