@@ -36,23 +36,11 @@ void NexaSender::SendDeviceOnSignal(byte groupId, byte buttonId)
 
 void NexaSender::SendSignal(bool turnAllOff, bool turnOn, byte groupId, byte buttonId)
 {
-	Serial.print("#2:" + String(_deviceId));
-
 	AssignDeviceIdToSignalData();
 	AssignTurnAllOffToSignalData(turnAllOff);
 	AssignTurnOnToSignalData(turnOn);
 	AssignGroupIdToSignalData(groupId);
 	AssignButtonIdToSignalData(buttonId);
-
-	Serial.println("");
-
-	for (size_t i = 0; i < 32; i++)
-	{
-		Serial.print(_binarySignalData[i]);
-	}
-
-	Serial.println("");
-
 	Send();
 }
 
